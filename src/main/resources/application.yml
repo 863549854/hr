@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: hr-eureka
+  profiles:
+    active: dev
+  jmx:
+    enabled: false
+logging:
+  config: classpath:logback-spring.xml
+server:
+  servlet:
+    context-path: /hr-eureka
+
+

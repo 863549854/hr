@@ -1,0 +1,17 @@
+#管理服务器10.3.90.162
+#服务节点10.3.96.127 	jkzc_server_2
+#注册中心负载节点 jkzc_server_2
+server:
+  port: 8001
+eureka:
+  environment: prod
+  datacenter: hr-2019
+  client:
+    serviceUrl:
+      defaultZone: http://10.3.90.162:8001/hr-eureka/eureka/
+  instance:
+    hostname: 10.3.96.127
+    instance-id: 10.3.96.127:8001
+#  server:  #配置属性，但由于 Eureka 自我保护模式以及心跳周期长的原因，经常会遇到 Eureka Server 不剔除已关停的节点的问题
+#    enable-self-preservation: false
+#    eviction-interval-timer-in-ms: 5000
